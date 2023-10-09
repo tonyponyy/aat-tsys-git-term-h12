@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 
 public class Raices {
 
@@ -38,29 +37,18 @@ public class Raices {
 	}
 	
 	
-	public double[] obtenerRaices() {
-		double arr[] = new double[2];
-		if (this.tieneRaices()) {
-			double f1 = (-this.b+ Math.sqrt(this.getDiscriminante()))/2*a;
-			double f2 = (-this.b- Math.sqrt(this.getDiscriminante()))/2*a;
-			arr[0]=f1;
-			arr[1]=f2;
-			return arr;
-		}else {
-			if (this.tieneRaiz()) {
-				double f1 = (-this.b+ Math.sqrt(this.getDiscriminante()))/2*a;
-				double f2 = (-this.b- Math.sqrt(this.getDiscriminante()))/2*a;
-				arr[0]=f1;
-				arr[1]=f2;
-				return arr;
-				}
-			
-		}
-		
-		return null;
+	public void obtenerRaices() {
+		double f1 = (-this.b+ Math.sqrt(this.getDiscriminante()))/2*a;
+		double f2 = (-this.b- Math.sqrt(this.getDiscriminante()))/2*a;
+		System.out.println("Las dos posibles soluciones son: " + f1 + ", "+f2);
 	}
 
-	
-	
+	public void obtenerRaiz() {
+		double f1 = (-this.b+ Math.sqrt(this.getDiscriminante()))/2*a;
+		System.out.println("La solucion es: " + f1);
+	}
+
+
+
 	
 }
