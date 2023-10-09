@@ -10,5 +10,12 @@ public class Raices {
 		this.b = b;
 		this.c = c;
 	}
-
+	public double getDiscriminante() {
+		return (b*b)-4*a*c; 
+	}
+	public boolean tieneRaices(){
+	 return this.getDiscriminante() > 0;
+	}
+	
+	
 }
